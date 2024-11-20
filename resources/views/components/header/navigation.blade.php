@@ -23,7 +23,6 @@
         @guest
           <x-header.nav-link href="/login" :active="request()->routeIs('login')">Login</x-header.nav-link>
         @endguest
-
       </ul>
     </div>
   </div>
