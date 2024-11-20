@@ -12,9 +12,7 @@ class Show extends Component
 
     public function mount(Task $task)
     {
-        if ($task->user_id != Auth::user()->id) {
-            abort(403);
-        }
+        $this->authorize('view', $task);
 
         $this->task = $task;
     }
