@@ -8,15 +8,17 @@
       @csrf
       <div class="flex flex-col mb-4">
         <label for="email" class="text-gray-700 font-medium mb-1">Email</label>
-        <input type="email" name="email" id="email" wire:model="email"
+        <input type="email" id="email" wire:model="email"
           class="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
       </div>
 
       <div class="flex flex-col mb-4">
         <label for="password" class="text-gray-700 font-medium mb-1">Password</label>
-        <input type="password" name="password" id="password" wire:model="password"
+        <input type="password" id="password" wire:model="password"
           class="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
       </div>
+
+      <a href="/register" class="text-blue-500 hover:underline">register</a>
 
       <button type="submit"
         class="w-full bg-blue-500 text-white font-semibold py-2 rounded-lg hover:bg-blue-600 transition duration-200">
