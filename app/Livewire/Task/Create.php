@@ -14,14 +14,14 @@ class Create extends Component
     {
         $validated = $this->validate([
             'title' => 'required',
-            'description' => 'required
-            ',
+            'description' => 'required',
         ]);
         $validated['user_id'] = Auth::user()->id;
 
-        Task::create($validated);
+        $task = Task::create($validated);
 
-        redirect('/task');
+        $this->dispatch('taskCreated', $task->id);
+        $this->reset();
     }
     public function render()
     {

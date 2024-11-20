@@ -1,5 +1,6 @@
 <div>
-  <a href="/task/create">Create Task</a>
+  <livewire:task.create />
+
   <ul>
     @forelse ($tasks as $task)
       <li><a href="/task/{{ $task->id }}" wire:navigate>{{ $task->title }}</a></li>
