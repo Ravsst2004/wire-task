@@ -19,7 +19,8 @@
 </head>
 
 <body>
-  <x-header.navigation />
+  {{-- <x-header.navigation /> --}}
+  <livewire:components.header.navbar />
 
   <main>
     {{ $slot }}
