@@ -9,6 +9,8 @@ class Login extends Component
 {
     public $email = "";
     public $password = "";
+    public $errorMessage = "";
+
     public function login()
     {
         $credentials = $this->validate([
@@ -21,10 +23,9 @@ class Login extends Component
             return redirect()->intended('/task');
         }
 
-        return back()->withErrors([
-            'email' => 'The provided credentials do not match our records.',
-        ]);
+        $this->errorMessage = 'The provided credentials do not match our records.';
     }
+
     public function render()
     {
         return view('livewire.auth.login');

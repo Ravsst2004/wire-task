@@ -1,43 +1,36 @@
-<section class="max-w-md mt-20 border-2 border-gray-300 rounded-lg mx-auto shadow-md">
+<section class="bg-container border-2 border-gray-300 rounded-lg mx-auto shadow-md flex flex-col justify-center">
+    <div class="p-6 glassmorphism sm:mx-24">
+        <form wire:submit="register" method="POST">
+            @csrf
+            <div class="flex flex-col mb-4">
+                <x-form-label for="name">Name</x-form-label>
+                <x-form-input type="text" id="name" wire:model="name" value="{{ old('name') }}">Name</x-form-input>
+                <x-form-error name="name"/>
+            </div>
 
-  <div class="p-6 bg-white">
-    <form wire:submit="register" method="POST">
-      @csrf
-      <div class="flex flex-col mb-4">
-        <label for="name" class="text-gray-700 font-medium mb-1">Name</label>
-        <input type="name" name="name" id="name" wire:model="name"
-          class="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
-        <x-form-error name="name" />
-      </div>
+            <div class="flex flex-col mb-4">
+                <x-form-label for="email">Email</x-form-label>
+                <x-form-input type="email" id="email" wire:model="email" value="{{ old('email') }}">Email</x-form-input>
+                <x-form-error name="email"/>
+            </div>
 
-      <div class="flex flex-col mb-4">
-        <label for="email" class="text-gray-700 font-medium mb-1">Email</label>
-        <input type="email" name="email" id="email" wire:model="email"
-          class="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
-        <x-form-error name="email" />
-      </div>
+            <div class="flex flex-col mb-4">
+                <x-form-label for="password">Password</x-form-label>
+                <x-form-input type="password" id="password" wire:model="password">Password</x-form-input>
+                <x-form-error name="password"/>
+            </div>
 
-      <div class="flex flex-col mb-4">
-        <label for="password" class="text-gray-700 font-medium mb-1">Password</label>
-        <input type="password" name="password" id="password" wire:model="password"
-          class="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
-        <x-form-error name="password" />
-      </div>
+            <div class="flex flex-col mb-4">
+                <x-form-label for="password_confirmation">Confirm Password</x-form-label>
+                <x-form-input type="password" id="password_confirmation" wire:model="password_confirmation">
+                    Confirm Password
+                </x-form-input>
+                <x-form-error name="password_confirmation"/>
+            </div>
 
-      <div class="flex flex-col mb-4">
-        <label for="password_confirmation" class="text-gray-700 font-medium mb-1">Password</label>
-        <input type="password" name="password_confirmation" id="password_confirmation"
-          wire:model="password_confirmation"
-          class="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
-        <x-form-error name="password_confirmation" />
-      </div>
+            <a href="/login" class="hover:underline">Already have an account?</a>
 
-      <a href="/login" class="text-blue-500 hover:underline">login</a>
-
-      <button type="submit"
-        class="w-full bg-blue-500 text-white font-semibold py-2 rounded-lg hover:bg-blue-600 transition duration-200">
-        Register
-      </button>
-    </form>
-  </div>
+            <x-form-button type="submit">Register</x-form-button>
+        </form>
+    </div>
 </section>

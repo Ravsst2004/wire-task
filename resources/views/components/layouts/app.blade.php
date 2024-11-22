@@ -15,7 +15,7 @@
     @vite('resources/css/app.css')
 </head>
 
-<body>
+<body class="bg-slate-900/10">
 <main class="max-w-screen-sm mx-auto h-screen">
     {{ $slot }}
 </main>
