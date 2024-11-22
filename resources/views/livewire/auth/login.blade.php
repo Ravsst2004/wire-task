@@ -1,28 +1,28 @@
 <section class="bg-container h-screen border-2 border-gray-300 rounded-lg mx-auto shadow-md flex flex-col justify-center">
     <div class="p-6 glassmorphism sm:mx-24">
-        @if($errorMessage)
-            <p class="text-sm text-red-600 text-center p-2 rounded border border-red-600">{{ $errorMessage }}</p>
-        @endif
+        <x-alert class="bg-red-400 text-red-50 p-2 rounded"/>
 
         <form wire:submit="login" method="POST">
             @csrf
             <div class="flex flex-col my-4">
-                <x-form-label for="email">Email</x-form-label>
-                <x-form-input type="email" id="email" wire:model="email">Email</x-form-input>
-                <x-form-error name="email"/>
+                <x-label for="email" class="text-white font-medium mb-1"/>
+                <x-input name="email" type="email" id="email" wire:model="email" class="form-input"/>
+                <x-error field="email" class="text-sm text-red-600"/>
             </div>
 
             <div class="flex flex-col mb-4">
-                <x-form-label for="password">Password</x-form-label>
-                <x-form-input type="password" id="password" wire:model="password">Email</x-form-input>
-                <x-form-error name="password"/>
+                <x-label for="password" class="text-white font-medium mb-1"/>
+                <x-input name="password" type="password" id="password" wire:model="password" class="form-input"/>
+                <x-error field="email" class="text-sm text-red-600"/>
             </div>
 
 
             <a href="/register" class="hover:underline"> Don't have an account?</a>
 
 
-            <x-form-button type="submit">Login</x-form-button>
+            <x-form-button class="form-button">
+                Login
+            </x-form-button>
         </form>
     </div>
 </section>

@@ -16,8 +16,8 @@
     @livewireStyles
 </head>
 
-<body class="bg-slate-900/10">
-<main class="max-w-screen-sm mx-auto ">
+<body class="bg-slate-900/20 ">
+<main class="max-w-screen-sm mx-auto shadow-2xl">
     {{ $slot }}
 </main>
 

@@ -9,3 +9,11 @@
 .bg-container {
     @apply bg-gradient-to-tl from-slate-300 to-violet-400 p-2 w-full sm:rounded
 }
+
+.form-input {
+    @apply border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-white
+}
+
+.form-button {
+    @apply w-full bg-white text-black border font-semibold py-2 rounded-lg transition duration-200
+}

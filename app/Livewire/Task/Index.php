@@ -12,11 +12,22 @@ class Index extends Component
 {
     use WithPagination;
 
+    public bool $isCreateFormOpen = false;
+
     #[On('taskCreated')]
+    public function openCreateForm()
+    {
+        $this->isCreateFormOpen = !$this->isCreateFormOpen;
+    }
+
     public function render()
     {
         return view('livewire.task.index', [
-            "tasks" => Task::where('user_id', Auth::user()->id)->latest()->paginate(6)
+            "tasks" => Task::with('user')
+                ->where('user_id', Auth::user()->id)
+                ->latest()
+                ->paginate(8)
         ]);
+
     }
 }
