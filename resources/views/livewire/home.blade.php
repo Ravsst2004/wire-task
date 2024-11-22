@@ -1,4 +1,4 @@
-<div class="bg-container flex flex-col space-y-6">
+<div class="bg-container flex flex-col space-y-6 h-screen">
     <h1 class="text-6xl sm:text-8xl font-medium uppercase text-white">
         Leave your note here, we do it for you
     </h1>

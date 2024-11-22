@@ -7,5 +7,5 @@
 }
 
 .bg-container {
-    @apply bg-gradient-to-tl from-slate-300 to-violet-400 p-2 w-full h-full sm:rounded
+    @apply bg-gradient-to-tl from-slate-300 to-violet-400 p-2 w-full sm:rounded
 }

@@ -1,23 +1,21 @@
-<section class="max-w-md mt-20 border-2 border-gray-300 rounded-lg mx-auto shadow-md">
-  <div class="p-6 bg-white">
-    <form wire:submit="store" method="POST">
-      @csrf
-      <div class="flex flex-col mb-4">
-        <label for="title" class="text-gray-700 font-medium mb-1">Title</label>
-        <input type="text" id="title" wire:model="title"
-          class="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
-      </div>
+<section class="border border-gray-300 rounded-lg mx-auto shadow-md flex flex-col">
+    <div class="p-4 glassmorphism">
+        <form wire:submit="store" method="POST">
+            @csrf
+            <div class="flex flex-col mb-2">
+                <x-form-label for="title">Title</x-form-label>
+                <x-form-input type="text" id="title" wire:model="title">Title</x-form-input>
+                <x-form-error name="title"/>
+            </div>
 
-      <div class="flex flex-col mb-4">
-        <label for="description" class="text-gray-700 font-medium mb-1">Description</label>
-        <textarea id="description" wire:model="description" cols="30" rows="10"
-          class="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
-      </div>
+            <div class="flex flex-col mb-2">
+                <x-form-label for="description">Description</x-form-label>
+                <textarea id="description" wire:model="description" rows="3"
+                          class="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-white"></textarea>
+                <x-form-error name="description"/>
+            </div>
 
-      <button type="submit"
-        class="w-full bg-blue-500 text-white font-semibold py-2 rounded-lg hover:bg-blue-600 transition duration-200">
-        Create
-      </button>
-    </form>
-  </div>
+            <x-form-button type="submit">Create</x-form-button>
+        </form>
+    </div>
 </section>

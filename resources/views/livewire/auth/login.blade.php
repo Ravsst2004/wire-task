@@ -1,4 +1,4 @@
-<section class="bg-container border-2 border-gray-300 rounded-lg mx-auto shadow-md flex flex-col justify-center">
+<section class="bg-container h-screen border-2 border-gray-300 rounded-lg mx-auto shadow-md flex flex-col justify-center">
     <div class="p-6 glassmorphism sm:mx-24">
         @if($errorMessage)
             <p class="text-sm text-red-600 text-center p-2 rounded border border-red-600">{{ $errorMessage }}</p>
