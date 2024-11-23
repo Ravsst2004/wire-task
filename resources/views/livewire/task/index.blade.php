@@ -12,9 +12,9 @@
             </div>
         </div>
 
-        <div class="flex flex-col items-center overflow-y-auto">
+        <div class="flex flex-col items-center overflow-y-auto space-y-2 mb-2">
             @forelse ($tasks as $task)
-                <a href="/task/{{ $task->id }}" wire:navigate class="my-2 border rounded p-2 w-full text-white">
+                <a href="/task/{{ $task->id }}" wire:navigate class="border rounded p-2 w-full text-white">
                     <h1 class="text-lg">{{ $task->title }}</h1>
                     <p class="text-sm">{{ $task->description }}</p>
                 </a>

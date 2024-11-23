@@ -10,11 +10,12 @@ class Create extends Component
 {
     public $title = "";
     public $description = "";
+
     public function store()
     {
         $validated = $this->validate([
-            'title' => 'required',
-            'description' => 'required',
+            'title' => 'required|max:255',
+            'description' => 'required|max:1000',
         ]);
         $validated['user_id'] = Auth::user()->id;
 
@@ -23,6 +24,7 @@ class Create extends Component
         $this->dispatch('taskCreated', $task->id);
         $this->reset();
     }
+
     public function render()
     {
         return view('livewire.task.create');

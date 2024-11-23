@@ -3,25 +3,25 @@
         <form wire:submit="register" method="POST">
             @csrf
             <div class="flex flex-col mb-4">
-                <x-label for="name" class="text-white font-medium mb-1"/>
+                <x-label for="name" class="form-label"/>
                 <x-input name="name" type="text" id="name" wire:model="name" value="{{ old('name') }}" class="form-input"/>
                 <x-error field="name" class="text-sm text-red-600"/>
             </div>
 
             <div class="flex flex-col mb-4">
-                <x-label for="email" class="text-white font-medium mb-1"/>
+                <x-label for="email" class="form-label"/>
                 <x-input name="email" type="email" id="email" wire:model="email" value="{{ old('email') }}" class="form-input"/>
                 <x-error field="email" class="text-sm text-red-600"/>
             </div>
 
             <div class="flex flex-col mb-4">
-                <x-label for="password" class="text-white font-medium mb-1"/>
+                <x-label for="password" class="form-label"/>
                 <x-input name="password" type="password" id="password" wire:model="password" class="form-input"/>
                 <x-error field="password" class="text-sm text-red-600"/>
             </div>
 
             <div class="flex flex-col mb-4">
-                <x-label for="password_confirmation" class="text-white font-medium mb-1"/>
+                <x-label for="password_confirmation" class="form-label"/>
                 <x-input name="password" type="password" id="password_confirmation" wire:model="password_confirmation" class="form-input"/>
                 <x-error field="password_confirmation" class="text-sm text-red-600"/>
             </div>

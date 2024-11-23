@@ -17,3 +17,7 @@
 .form-button {
     @apply w-full bg-white text-black border font-semibold py-2 rounded-lg transition duration-200
 }
+
+.form-label {
+    @apply text-white font-medium mb-1
+}
