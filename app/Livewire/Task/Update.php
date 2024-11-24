@@ -30,7 +30,7 @@ class Update extends Component
 
         $this->task->update($validated);
 
-        return redirect('/task/' . $this->task->id);
+        return redirect('/task');
     }
 
     public function render()

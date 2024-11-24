@@ -23,7 +23,6 @@ class Login extends Component
             return redirect()->intended('/task');
         }
 
-//        $this->errorMessage = 'The provided credentials do not match our records.';
         session()->flash('alert', 'The provided credentials do not match our records.');
     }
 
